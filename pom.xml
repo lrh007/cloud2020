@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.lrh.cloud</groupId>
+    <artifactId>cloud2020</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>cloud-api</module>
+        <module>cloud-consumer-order80</module>
+        <module>cloud-consumerfeign-order80</module>
+        <module>cloud-consumerconsul-order80</module>
+        <module>cloud-consumer-hystrix-dashboard9001</module>
+        <module>cloud-provider-payment8001</module>
+        <module>cloud-provider-payment8002</module>
+        <module>cloud-providerconsul-payment8003</module>
+        <module>cloud-provider-hystrix-payment8004</module>
+        <module>cloud-eureka-server7001</module>
+        <module>cloud-eureka-server7002</module>
+        <module>cloud-eureka-server7003</module>
+        <module>cloud-consumer-feign-hystrix-order80</module>
+        <module>cloud-gateway-gateway9527</module>
+        <module>cloud-config-center3344</module>
+        <module>cloud-config-client3355</module>
+    </modules>
+    <!--统一管理jar包版本-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <!--锁定子模块依赖的版本号，这里并没有导入具体的依赖，dependencyManagement这个标签只在父工程中使用，子模块中可以使用这个版本号，如果写了就安装自己的为准-->
+    <!--<dependencyManagement>
+        <dependencies>
+        </dependencies>
+    </dependencyManagement>-->
+
+
+</project>

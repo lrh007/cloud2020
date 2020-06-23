@@ -1,0 +1,30 @@
+
+server:
+  port: 8002
+
+spring:
+  application:
+    name: cloud-payment-server
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db2020?characterEncoding=UTF-8&serverTimezone=UTC
+#  cloud:
+#    zookeeper:
+#      connect-string: 192.168.10.128:2181  #zookeeper服务器连接地址
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+  type-aliases-package: com.lrh.cloud.beans #所有实体类所在的包
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+#      defaultZone: http://localhost:7001/eureka/
